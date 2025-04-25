@@ -1,0 +1,89 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 252 80% 80%;
+    --primary-foreground: 240 5.9% 10%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+
+    --radius: 1rem;
+
+    --sidebar-background: 240 10% 3.9%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 252 80% 80%;
+    --sidebar-primary-foreground: 240 5.9% 10%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 252 80% 80%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-poppins;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-nunito font-bold;
+  }
+}
+
+@layer utilities {
+  .hover-scale {
+    @apply transition-transform duration-200 hover:scale-105;
+  }
+
+  .glass-card {
+    @apply bg-secondary/60 backdrop-blur-md border border-white/10 shadow-lg;
+  }
+
+  .grid-item {
+    animation: fade-in 0.3s ease-out;
+    animation-fill-mode: both;
+  }
+
+  .grid-item:nth-child(1) { animation-delay: 0.05s; }
+  .grid-item:nth-child(2) { animation-delay: 0.1s; }
+  .grid-item:nth-child(3) { animation-delay: 0.15s; }
+  .grid-item:nth-child(4) { animation-delay: 0.2s; }
+  .grid-item:nth-child(5) { animation-delay: 0.25s; }
+  .grid-item:nth-child(6) { animation-delay: 0.3s; }
+  .grid-item:nth-child(7) { animation-delay: 0.35s; }
+  .grid-item:nth-child(8) { animation-delay: 0.4s; }
+  .grid-item:nth-child(9) { animation-delay: 0.45s; }
+}
